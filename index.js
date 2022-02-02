@@ -3,30 +3,25 @@ const employee = {
     address: "Candy Land", 
 };
 
-console.log(employee)
 
 function updateEmployeeWithKeyAndValue(employee, key, value) {
-    const newEmployee = {...employee};
-
-    newEmployee[key] = value;
-
-    return(newEmployee);
+    const newObj = {... employee}
+    newObj[key] = value
+    return newObj
 }
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
     employee[key] = value;
-    return(employee);
+    return employee;
 }
 
 function deleteFromEmployeeByKey(employee, key) {
-    const newEmployee = {...employee};
-
-    delete newEmployee[key];
-    
-    return(newEmployee);
+    const newObj = {...employee};
+    delete newObj[key];
+    return newObj;
 }
 
 function destructivelyDeleteFromEmployeeByKey(employee, key) {
     delete employee[key];
-    return(employee);
+    return employee
 }
